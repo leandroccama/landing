@@ -7,7 +7,9 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.shell.linux": "/bin/sh"
+        "terminal.integrated.shell.linux": "/bin/sh",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
       },
       "extensions": [
         "astro-build.astro-vscode",
