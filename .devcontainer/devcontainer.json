@@ -27,7 +27,7 @@
   "runServices": ["web"],
   "containerEnv": { "NODE_ENV": "development" },
 
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "",
 
   // Evita advertencias de Git por carpeta montada como root (opcional)
   "postStartCommand": "git config --global --add safe.directory /app"

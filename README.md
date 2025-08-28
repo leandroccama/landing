@@ -44,3 +44,10 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Dev containers
+
+Hay que darle permisos a `dev.sh` para poder cachear `node_modules`
+```sh
+chmod +x dev.sh
+```
