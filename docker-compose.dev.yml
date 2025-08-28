@@ -1,0 +1,17 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    user: "0:0" # correr como root para evitar problemas de permisos en Mac/Linux
+    working_dir: /app
+    command: sh -lc "if [ -f package-lock.json ]; then npm ci; else npm install; fi && npm run dev -- --host 0.0.0.0"
+    ports:
+      - "4321:4321"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      # si el hot-reload no detecta cambios en Mac:
+      # - CHOKIDAR_USEPOLLING=1
