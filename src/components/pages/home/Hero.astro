@@ -1,0 +1,78 @@
+---
+import { WHATSAPP_LINK } from '@data/navigation';
+import { CircleCheck, ChevronRight, Quote } from '@lucide/astro';
+import WhatsappIcon from '@assets/whatsapp.svg';
+---
+
+<section class="relative overflow-hidden">
+  <div
+    class="absolute inset-0 bg-[radial-gradient(50%_50%_at_50%_0%,rgba(0,0,0,0.06),transparent_70%)]"
+  >
+  </div>
+  <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+    <div class="grid items-center gap-10 md:grid-cols-2">
+      <div class="relative">
+        <h1 class="text-primary text-4xl font-extrabold tracking-tight md:text-5xl">
+          Renueva tus espacios: alfombras, tapicería y cocinas a medida
+        </h1>
+        <p class="mt-5 text-lg text-neutral-600">
+          Desde arreglos puntuales hasta la creación de tu cocina completa con todos sus
+          instrumentos. Calidad, puntualidad y garantía.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a
+            href={WHATSAPP_LINK}
+            class="bg-primary inline-flex items-center gap-2 rounded-2xl px-5 py-3 text-white hover:opacity-90"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Solicitar cotización por WhatsApp"
+          >
+            <WhatsappIcon class="h-5 w-5" aria-hidden />
+            Solicitar cotización
+          </a>
+          <a
+            href="#servicios"
+            class="inline-flex items-center gap-2 rounded-2xl border border-neutral-300 px-5 py-3 hover:bg-white"
+          >
+            Ver servicios <ChevronRight class="h-5 w-5" aria-hidden />
+          </a>
+        </div>
+
+        <ul class="mt-6 flex flex-wrap items-center gap-4 text-sm text-neutral-600">
+          <li class="flex items-center gap-2">
+            <CircleCheck class="h-4 w-4" aria-hidden /> Visita y medición
+          </li>
+          <li class="flex items-center gap-2">
+            <CircleCheck class="h-4 w-4" aria-hidden /> Presupuesto claro
+          </li>
+          <li class="flex items-center gap-2">
+            <CircleCheck class="h-4 w-4" aria-hidden /> Garantía por escrito
+          </li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div
+          class="grid aspect-[4/3] w-full place-items-center rounded-3xl bg-gradient-to-br from-neutral-100 to-neutral-200 shadow-sm"
+        >
+          <div class="p-6 text-center">
+            <p class="text-sm tracking-widest text-neutral-500 uppercase">Portafolio</p>
+            <h3 class="mt-1 text-xl font-semibold">Cocina Moderna – Tablero de cuarzo</h3>
+            <p class="mt-2 text-neutral-600">
+              Mueble alto/bajo, iluminación LED, grifería monomando, zócalos antihumedad.
+            </p>
+          </div>
+        </div>
+        <div class="absolute -right-4 -bottom-4 hidden md:block">
+          <div class="rounded-2xl border border-neutral-200 bg-white p-4 shadow">
+            <div class="flex items-center gap-3">
+              <Quote class="h-5 w-5" aria-hidden />
+              <p class="max-w-[18rem] text-sm">
+                “Quedó hermoso y a tiempo. La tapicería parece nueva y la cocina quedó completa.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
